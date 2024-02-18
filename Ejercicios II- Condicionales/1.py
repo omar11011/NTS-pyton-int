@@ -1,5 +1,4 @@
 # Escriba un programa que solicite el ingreso de un número y verifique si es numero divisible por 3 o es divisible por 7.
-
 import os
 
 while True:
