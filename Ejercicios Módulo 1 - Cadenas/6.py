@@ -1,9 +1,15 @@
-# Pedir al usuario que ingrese una cadena
+import os
+
 while True:
-    word = input("Ingresa lo que desees: ")
+    os.system('cls')
+    
+    try:
+        word = input("Ingresa lo que desees: ")
 
-    if len(word) > 0: break
+        if len(word) > 0:
+            wordBackwards = word[::-1]
 
-# Imprimir la cadena al revés
-wordBackwards = word[::-1]
-print(f"Lo que ingresaste al revés: {wordBackwards}")
+            print(f"Lo que ingresaste al revés: {wordBackwards}")
+            break
+    except ValueError:
+        print("Debes escribir algo...")

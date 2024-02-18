@@ -1,9 +1,14 @@
-# Pedir al usuario que ingrese su nombre completo
+import os
+
 while True:
-    name = input("Ingresa tu nombre completo: ")
+    os.system('cls')
 
-    if len(name) > 0: break
+    try:
+        name = input("Ingresa tu nombre completo: ")
 
-# Formas
-print(f"Forma 1: {name.upper()}")
-print(f"Forma 2: {name.title()}")
+        if len(name) > 0:
+            print(f"Forma 1: {name.upper()}")
+            print(f"Forma 2: {name.title()}")
+            break
+    except ValueError:
+        print("Debes escribir algo...")

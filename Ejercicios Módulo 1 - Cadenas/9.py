@@ -1,10 +1,15 @@
-# Pedir al usuario que ingrese una palabra
+import os
+
 while True:
-    word = input("Ingresa una palabra: ")
+    os.system('cls')
 
-    if len(word) > 0: break
+    try:
+        word = input("Ingresa una palabra: ")
 
-# Ordenar las letras de la palabra de menor a mayor
-orderedWord = ''.join(sorted(word))
+        if len(word) > 0:
+            orderedWord = ''.join(sorted(word))
 
-print(f"Palabra ordenada de menor a mayor: {orderedWord}")
+            print(f"Palabra ordenada de menor a mayor: {orderedWord}")
+            break
+    except ValueError:
+        print("Debes escribir algo...")

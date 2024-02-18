@@ -1,11 +1,15 @@
-# Pedir al usuario que ingrese una frase
+import os
+
 while True:
-    phrase = input("Ingresa una frase: ")
+    os.system('cls')
 
-    if len(phrase) > 0: break
+    try:
+        phrase = input("Ingresa una frase: ")
 
-# Eliminar todas las vocales
-phraseWithoutVowels = ''.join(character for character in phrase if character.lower() not in 'aeiouAEIOU')
+        if len(phrase) > 0:
+            phraseWithoutVowels = ''.join(character for character in phrase if character.lower() not in 'aeiouAEIOU')
 
-# Imprimir el resultado
-print(f"Frase sin vocales: {phraseWithoutVowels}")
+            print(f"Frase sin vocales: {phraseWithoutVowels}")
+            break
+    except ValueError:
+        print("Debes escribir algo...")

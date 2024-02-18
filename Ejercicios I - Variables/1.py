@@ -1,18 +1,17 @@
 # Determinar el área de un triángulo rectángulo
-
-print('¡Bienvenid@ a tu calculadora de área de un triángulo rectángulo!')
-print('Por favor ingresa los catetos separados por espacios.')
+import os
 
 while True:
-    try:
-        cathetos = input('Catetos: ')
-        cathetos = [abs(int(num)) for num in cathetos.split()]
-        
-        if (len(cathetos) > 1 and cathetos[0] > 0 and cathetos[1] > 0):
-            area = cathetos[0] * cathetos[1] / 2
-            area = "{:.2f}".format(area)
+    os.system('cls')
 
-            print(f'El área de un triángulo con catetos {cathetos[0]} y {cathetos[1]} es aproximadamente {area}')
+    try:
+        c1 = abs(float(input("Ingresa el valor del primer cateto: ")))
+        c2 = abs(float(input("Ingresa el valor del segundo cateto: ")))
+        
+        if c1 > 0 and c2 > 0:
+            area = c1 * c2 / 2
+
+            print(f'El área de un triángulo con catetos {c1} y {c2} es aproximadamente {area:.2f}')
             break
     except:
         print('Ingresa los datos correctamente.')
